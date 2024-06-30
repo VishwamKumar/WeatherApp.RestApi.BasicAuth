@@ -12,8 +12,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseMiddleware<BasicAuthMiddleware>();
 app.UseRouting();
+app.UseMiddleware<BasicAuthMiddleware>();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
